@@ -157,19 +157,22 @@
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="text-black" for="fname">Full Name</label>
-                  <input type="text" id="fname" class="form-control" name="user_name" placeholder="Full Name">
+                  <input type="text" id="fname" class="form-control" name="user_name" placeholder="Full Name" required>
                 </div>
                 <div class="col-md-6">
+                  <input type="hidden" name="contact_title" value="Phone Number" id="">
                   <label class="text-black" for="lname">Telephone</label>
-                  <input type="text" id="lname" class="form-control" name="user_contact" placeholder="Telephone">
+                  <input type="text" id="lname" class="form-control" name="user_contact" placeholder="Telephone"
+                    required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
+                  <input type="hidden" name="date_title" value="Date" id="">
                   <label class="text-black" for="date">Date</label>
                   <input type="text" id="date" class="form-control datepicker px-2" name="date"
-                    placeholder="Date of visit">
+                    placeholder="Date of visit" required>
                 </div>
                 <div class="col-md-6">
                   <label class="text-black" for="email">Email</label>
@@ -179,15 +182,17 @@
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="hidden" name="address_title" value="Address" id="">
                   <label class="text-black" for="fname">Address</label>
-                  <input type="text" id="fname" class="form-control" name="user_address" placeholder="Address">
+                  <input type="text" id="fname" class="form-control" name="user_address" placeholder="Address" required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
+                  <input type="hidden" name="service_title" value="Service" id="">
                   <label class="text-black" for="treatment">Service You Want</label>
-                  <select name="service" id="treatment" class="form-control">
+                  <select name="service" id="treatment" class="form-control" required>
                     <option value="Massage & Waxing">Massage & Waxing</option>
                     <option value="Hair Coloring">Hair Coloring</option>
                     <option value="air Cut">Hair Cut</option>
