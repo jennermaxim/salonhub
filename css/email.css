@@ -1,0 +1,103 @@
+/* .send{
+    background-image: linear-gradient(to right, #663399, #8853bd);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 25px;
+} */
+
+.send:active{
+    opacity: 0.8;
+}
+
+.model, .failed{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+.model.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+.failed.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+.model .content, .failed .content{
+    background-color: #fff;
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.failed .content{
+    color: red;
+}
+
+.model .content .title, .failed .content .title{
+    padding-top: 10px;
+}
+
+.model .content .close, .failed .content .close-failed{
+    /* margin: 10px; */
+    background-color: #8bc34a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+.model .content .close:active, .failed .content .close-failed:active{
+    opacity: 0.8;
+    color: #fff;
+}
+
+/*CONTACT FORM */
+.contact{
+    width: 500px;
+    margin: 20px 20px 5px 20px;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form label, input, select, textarea{
+    /* margin: 10px; */
+    /* padding: 10px; */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact form select, input[type= "date"]{
+    cursor: pointer;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 446px) {
+    .model .content{
+        width: 80%;
+    }
+
+    .failed .content{
+        width: 80%;
+    }
+}
